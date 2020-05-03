@@ -35,7 +35,7 @@
         // Say hello to the person who just signed in:
         oktaSignIn.authClient.tokenManager.get('idToken').then(function (idToken) {
           alert('Hello, ' + idToken.claims.email);
-          window.location.replace(window.location.hostname + "/home.html");
+          window.location.replace("home.html");
         });
       },
       function error(err) {
@@ -48,7 +48,7 @@
       // Session exists, show logged in state.
       if (res.status === 'ACTIVE') {
         alert('Welcome back, ' + res.login);
-        window.location.replace(window.location.hostname + "/home.html");
+        window.location.replace("home.html");
         return;
       }
       // No session, show the login form
