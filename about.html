@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>About</title>
+    <meta property="og:image" content="assets/img/bathe%20cash.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/smoothproducts.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="#">History Creative</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item" role="presentation"></li>
+                    <li class="nav-item" role="presentation"></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="watch.html">Watch</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page">
+        <section class="clean-block about-us">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">About</h2>
+                    <p>The following is a variety of information detailing life in Medieval Europe as well as information about the musical</p>
+                </div>
+                <div class="row justify-content-center" style="padding-top: 100px;">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card clean-card text-center">
+                            <div class="card-body info">
+                                <h4 class="card-title">The Musical</h4>
+                                <p class="card-text">The musical begins with me playing the role of Harold Godwinson, a man who was competing for the throne when King Edward the Confessor died, who had no children.</p>
+                                <p class="card-text">At his death, 4 parties competed for the throne. One of these was William, Duke of Normandy, who had been promised the throne by Edward. Harold even promised his support to William under oath in 1064.</p>
+                                <p class="card-text">Unfortunately, Edward had apparently given the country to Harold Godwinson on his death bed, so Harold was crowned the new king.</p>
+                                <p class="card-text">The start of the musical takes place here, with me playing the role of Harold Godwinson. I have just claimed the throne and my son is inquiring about my new role.</p>
+                                <p class="card-text">Then, the Normans, led by William the Conquerer come back, disputing my claim to the throne. This leads to the Battle of Hastings, where William wins and makes numeroud reforms to England and influences many aspect of life
+                                    as we know it today.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card clean-card text-center">
+                            <div class="card-body info">
+                                <h4 class="card-title">Extra Information</h4>
+                                <p class="card-text">The musical details various affects feudalism has on the daily life of a king. Not only does it define his status in society, it is the source of all his income and the lavish way he lives his life.&nbsp;</p>
+                                <p class="card-text">The significance of a king in medieval society cannot be understated, as he is the one who runs the system. He is vassal to none and sits at the apex. This means that all the lands are owned by him, and he leases them in
+                                    return for money, support, and people. This land given to a vassal is called a fief, and the people that give land are called lords.</p>
+                                <p class="card-text">Evidently, the role the king plays is very high, which has an obvious impact on his identity, as a divine god. The lifestyle and culture is also impacted, which allowed the king to have a vast disposal of wrokers at his
+                                    fingertips, indulge in lavish pastimes such as hunting, falconry, music and banquets, and eat a tremendous amount of meat almost daily.</p>
+                                <p class="card-text">The Norman conquest only accentuated these impacts, further spreading feudalism in a more dominant manner. The Frankish Normans brought a revolutionised system of feudalism that was much more centralised and managable.
+                                    All the lands in England were now owned by the king, who had inumerable power. Laws were so easy to enforce now that William scarcely spent any time in England, and instead managed most activties abroad. This is when
+                                    the identity of the King as a god started to become prominant, as the spread of Christianity and the church's power grew.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer dark" style="padding-top: 0px;padding-bottom: 0px;">
+        <div class="footer-copyright" style="padding-top: 0px;padding-bottom: 0px;">
+            <p style="padding-bottom: 0px;">© 2020 Refus Scrimingour Inc.</p>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="assets/js/smoothproducts.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+<script>
+  var oktaSignIn = new OktaSignIn({
+    baseUrl: 'https://dev-780600.okta.com',
+    clientId: '0oaafthrzDLR5VRmL4x6',
+    authParams: {
+      issuer: 'https://dev-780600.okta.com/oauth2/default',
+      responseType: ['token', 'id_token'],
+      display: 'page'
+    }
+});
+  
+oktaSignIn.authClient.session.get().then(function (res) {
+  console.log(res.status);
+  if(res.status != "ACTIVE") { 
+    window.location.replace(window.location.hostname + "/403/");
+    } else { 
+        
+    }
+} )
+
+</script>
+
+</html>
