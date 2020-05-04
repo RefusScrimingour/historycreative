@@ -34,8 +34,22 @@
 
         // Say hello to the person who just signed in:
         oktaSignIn.authClient.tokenManager.get('idToken').then(function (idToken) {
-          console.log(idToken);
-          alert('Hello, ' + idToken.claims.email);
+          //alert('Hello, ' + idToken.claims.email);
+          //gets user's name
+          var xhr = new XMLHttpRequest();
+          xhr.withCredentials = true;
+
+          xhr.addEventListener("readystatechange", function() {
+          if(this.readyState === 4) {
+              alert('Hello, ' + JSON.parse(this.responseText)['_links']['user']['name']);
+          }
+          });
+
+          xhr.open("GET", "https://dev-780600.okta.com/api/v1/sessions/me");
+          xhr.setRequestHeader("Accept", "application/json");
+          xhr.setRequestHeader("Content-Type", "application/json");
+
+          xhr.send();
           window.location.replace("home.html");
         });
       },
@@ -48,7 +62,21 @@
     oktaSignIn.authClient.session.get().then(function (res) {
       // Session exists, show logged in state.
       if (res.status === 'ACTIVE') {
-        alert('Welcome back, ' + res.login);
+        //alert('Welcome back, ' + res.login);
+        var xhr = new XMLHttpRequest();
+          xhr.withCredentials = true;
+
+          xhr.addEventListener("readystatechange", function() {
+          if(this.readyState === 4) {
+              alert('Hello, ' + JSON.parse(this.responseText)['_links']['user']['name']);
+          }
+          });
+
+          xhr.open("GET", "https://dev-780600.okta.com/api/v1/sessions/me");
+          xhr.setRequestHeader("Accept", "application/json");
+          xhr.setRequestHeader("Content-Type", "application/json");
+
+          xhr.send();
         window.location.replace("home.html");
         return;
       }
