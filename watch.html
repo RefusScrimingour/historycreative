@@ -21,7 +21,7 @@
 oktaSignIn.authClient.session.get().then(function (res) {
   console.log(res.status);
   if(res.status != "ACTIVE") { 
-    window.location.replace("/");
+    window.location.replace("/historycreative");
     } else { 
         //gets watch page
 var xhr = new XMLHttpRequest();
