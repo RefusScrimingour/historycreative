@@ -34,6 +34,7 @@
 
         // Say hello to the person who just signed in:
         oktaSignIn.authClient.tokenManager.get('idToken').then(function (idToken) {
+          console.log(idToken);
           alert('Hello, ' + idToken.claims.email);
           window.location.replace("home.html");
         });
